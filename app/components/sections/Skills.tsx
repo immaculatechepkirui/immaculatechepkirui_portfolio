@@ -17,7 +17,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 py-32">
+    <section id="skills" className="px-6 py-20 md:py-24">
       <div className="mx-auto max-w-5xl">
 
         <Reveal>

@@ -14,7 +14,7 @@ export default function Projects() {
       : projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="px-6 py-32">
+    <section id="projects" className="px-6 py-20 md:py-24">
       <div className="mx-auto max-w-6xl">
         
         {/* Heading */}
