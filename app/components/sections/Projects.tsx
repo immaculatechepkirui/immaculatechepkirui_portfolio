@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <section id="projects" className="px-6 py-20 md:py-24">
       <div className="mx-auto max-w-6xl">
-        
+
         {/* Heading */}
         <h2 className="text-4xl font-bold md:text-6xl">
           Selected Projects
@@ -32,11 +32,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`rounded-full border px-5 py-2 text-sm transition ${
-                active === cat
+              className={`rounded-full border px-5 py-2 text-sm transition ${active === cat
                   ? "border-white bg-white text-black"
                   : "border-white/10 text-zinc-400 hover:text-white"
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -65,6 +64,75 @@ export default function Projects() {
                 <p className="mt-2 text-sm text-zinc-400">
                   {project.description}
                 </p>
+
+                {/* Project Links */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.links?.website && (
+                    <a
+                      href={project.links.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 px-3 py-1 text-xs transition hover:bg-white/10"
+                    >
+                      Website ↗
+                    </a>
+                  )}
+
+                  {project.links?.frontend && (
+                    <a
+                      href={project.links.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 px-3 py-1 text-xs transition hover:bg-white/10"
+                    >
+                      Frontend ↗
+                    </a>
+                  )}
+
+                  {project.links?.backend && (
+                    <a
+                      href={project.links.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 px-3 py-1 text-xs transition hover:bg-white/10"
+                    >
+                      Backend ↗
+                    </a>
+                  )}
+
+                  {project.links?.mobile && (
+                    <a
+                      href={project.links.mobile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 px-3 py-1 text-xs transition hover:bg-white/10"
+                    >
+                      Mobile ↗
+                    </a>
+                  )}
+
+                  {project.links?.design && (
+                    <a
+                      href={project.links.design}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 px-3 py-1 text-xs transition hover:bg-white/10"
+                    >
+                      Figma ↗
+                    </a>
+                  )}
+
+                  {project.links?.docs && (
+                    <a
+                      href={project.links.docs}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 px-3 py-1 text-xs transition hover:bg-white/10"
+                    >
+                      Docs ↗
+                    </a>
+                  )}
+                </div>
 
                 {/* hover line */}
                 <div className="mt-6 h-[1px] w-0 bg-white transition-all duration-500 group-hover:w-full" />
