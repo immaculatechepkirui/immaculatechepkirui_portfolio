@@ -41,11 +41,15 @@ export default function Contact() {
                             className="text-sm text-zinc-400 hover:text-white"
                         >
                             LinkedIn
+                        </a> <a
+                            href="https://www.behance.net/immah_leley_kaku"
+                            target="_blank"
+                            className="text-sm text-zinc-400 hover:text-white"
+                        >
+                            Behance
                         </a>
-
                     </div>
                 </Reveal>
-
             </div>
         </section>
     );
