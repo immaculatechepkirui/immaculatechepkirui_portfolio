@@ -2,19 +2,30 @@ export const projects = [
   {
     title: "Jumia Kenya QA Portfolio",
     category: "QA",
+    featured: true,
     description:
       "Designed and executed a complete end-to-end Quality Assurance project for Jumia Kenya. Produced 50 exploratory test cases across 10 functional areas, authored a formal test plan, documented production bugs, automated critical user journeys using Playwright (Python), validated APIs with Postman, performed Lighthouse performance audits, and packaged the complete QA workflow into a production-ready GitHub repository.",
     links: {
       backend: "https://github.com/immaculatechepkirui/jumia_qa_portfolio",
-      docs: "https://github.com/immaculatechepkirui/jumia_qa_portfolio#readme",
+      docs:
+        "https://github.com/immaculatechepkirui/jumia_qa_portfolio#readme",
     },
+    tech: [
+      "Playwright",
+      "Python",
+      "Pytest",
+      "Postman",
+      "Lighthouse",
+      "Git",
+    ],
   },
 
   {
     title: "Planta",
     category: "AI",
+    featured: true,
     description:
-      "AI-powered farming assistant for yield prediction and seed recommendations.",
+      "AI-powered farming assistant for crop monitoring, yield prediction, and intelligent seed recommendations.",
     links: {
       backend: "https://github.com/immaculatechepkirui/planta-backend",
       frontend: "https://github.com/immaculatechepkirui/planta-frontend",
@@ -23,16 +34,30 @@ export const projects = [
       design:
         "https://www.figma.com/design/JR1Fm7y7iBNhcBnE5xmUe1/Planta",
     },
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+    ],
   },
 
   {
     title: "Library Management System",
     category: "Web",
     description:
-      "Production-grade Django REST API for managing books, members, borrowing, overdue fines, and library operations with Docker and PostgreSQL.",
+      "Production-grade Django REST API for managing books, members, borrowing, overdue fines, and library operations using Docker and PostgreSQL.",
     links: {
       backend: "https://github.com/immaculatechepkirui/library_system",
     },
+    tech: [
+      "Django",
+      "Django REST",
+      "Python",
+      "PostgreSQL",
+      "Docker",
+    ],
   },
 
   {
@@ -44,11 +69,18 @@ export const projects = [
       design:
         "https://www.figma.com/design/47W8XP8GvozulDCcrwsBq7/KFC--Fuel-Company",
     },
+    tech: [
+      "Figma",
+      "UI Design",
+      "UX Research",
+      "Prototyping",
+    ],
   },
 
   {
     title: "CraftCrest",
     category: "Web",
+    featured: true,
     description:
       "Marketplace platform connecting Kenyan artisans with buyers through secure payments, logistics tracking, and M-Pesa integration.",
     links: {
@@ -61,6 +93,13 @@ export const projects = [
       docs:
         "https://github.com/immaculatechepkirui/CraftCrest-Technical-Documentation",
     },
+    tech: [
+      "React",
+      "Django",
+      "PostgreSQL",
+      "M-Pesa API",
+      "Figma",
+    ],
   },
 
   {
@@ -73,14 +112,11 @@ export const projects = [
       backend: "https://github.com/akirachix/mind-maps-backend",
       mobile: "https://github.com/akirachix/mind-maps-mobile",
     },
-  },
-  {
-    title: "Jumia Kenya QA Portfolio",
-    category: "QA",
-    description:
-      "Comprehensive end-to-end Quality Assurance project for Jumia Kenya covering exploratory testing, 50 manual test cases across 10 functional areas, formal test planning, bug reporting, Playwright automation, Postman API testing, Lighthouse performance auditing, and complete technical documentation.",
-    links: {
-      repo: "https://github.com/immaculatechepkirui/jumia_qa_portfolio",
-    },
+    tech: [
+      "Flutter",
+      "Django",
+      "REST API",
+      "Gamification",
+    ],
   },
 ];

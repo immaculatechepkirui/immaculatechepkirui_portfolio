@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { projects } from "@/app/data/projects";
 
-const categories = ["All", "Mobile", "AI", "Web", "QA"];
+const categories = ["All", "AI", "Web", "Mobile", "QA"];
 
 export default function Projects() {
   const [active, setActive] = useState("All");
@@ -44,28 +44,54 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {filtered.map((project, i) => (
+          {filtered.map((project) => (
             <div
-              key={i}
+              key={project.title}
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition duration-300 hover:scale-[1.02]"
             >
               {/* Glow */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-violet-500/10 to-cyan-500/10 opacity-0 blur-xl transition group-hover:opacity-100" />
 
               <div className="relative">
+                {/* Featured Badge */}
+                {project.featured && (
+                  <div className="absolute right-0 top-0">
+                    <span className="rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 px-3 py-1 text-xs font-semibold text-black shadow-lg">
+                      ⭐ Featured
+                    </span>
+                  </div>
+                )}
+
+                {/* Category */}
                 <span className="text-xs uppercase tracking-widest text-violet-400">
                   {project.category}
                 </span>
 
+                {/* Title */}
                 <h3 className="mt-2 text-2xl font-semibold">
                   {project.title}
                 </h3>
 
+                {/* Description */}
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
                   {project.description}
                 </p>
 
-                {/* Links */}
+                {/* Technology Badges */}
+                {project.tech && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-300 transition hover:border-violet-400 hover:bg-violet-500/20"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Project Links */}
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.links?.website && (
                     <a
@@ -132,20 +158,9 @@ export default function Projects() {
                       📄 Docs
                     </a>
                   )}
-
-                  {project.links?.repo && (
-                    <a
-                      href={project.links.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-full border border-white/10 px-3 py-1 text-xs transition hover:border-white hover:bg-white/10"
-                    >
-                      🚀 GitHub
-                    </a>
-                  )}
                 </div>
 
-                {/* Hover line */}
+                {/* Hover Line */}
                 <div className="mt-6 h-[1px] w-0 bg-white transition-all duration-500 group-hover:w-full" />
               </div>
             </div>
