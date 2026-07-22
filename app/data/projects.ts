@@ -1,5 +1,16 @@
 export const projects = [
   {
+    title: "Jumia Kenya QA Portfolio",
+    category: "QA",
+    description:
+      "Designed and executed a complete end-to-end Quality Assurance project for Jumia Kenya. Produced 50 exploratory test cases across 10 functional areas, authored a formal test plan, documented production bugs, automated critical user journeys using Playwright (Python), validated APIs with Postman, performed Lighthouse performance audits, and packaged the complete QA workflow into a production-ready GitHub repository.",
+    links: {
+      backend: "https://github.com/immaculatechepkirui/jumia_qa_portfolio",
+      docs: "https://github.com/immaculatechepkirui/jumia_qa_portfolio#readme",
+    },
+  },
+
+  {
     title: "Planta",
     category: "AI",
     description:
@@ -61,6 +72,15 @@ export const projects = [
       website: "https://coopconnect.netlify.app/",
       backend: "https://github.com/akirachix/mind-maps-backend",
       mobile: "https://github.com/akirachix/mind-maps-mobile",
+    },
+  },
+  {
+    title: "Jumia Kenya QA Portfolio",
+    category: "QA",
+    description:
+      "Comprehensive end-to-end Quality Assurance project for Jumia Kenya covering exploratory testing, 50 manual test cases across 10 functional areas, formal test planning, bug reporting, Playwright automation, Postman API testing, Lighthouse performance auditing, and complete technical documentation.",
+    links: {
+      repo: "https://github.com/immaculatechepkirui/jumia_qa_portfolio",
     },
   },
 ];
