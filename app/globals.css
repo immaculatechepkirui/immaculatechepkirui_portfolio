@@ -13,10 +13,6 @@
   --muted: #a1a1aa;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--font-prompt), sans-serif;
   background: var(--background);
