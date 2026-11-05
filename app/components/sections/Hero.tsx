@@ -28,7 +28,7 @@ export default function Hero() {
           }}
           className="mt-6 text-xl text-zinc-400"
         >
-          Software Engineer • UI/UX Designer • Frontend/Backend Developer • QA Engineer • AI/ML Engineer • Automation Engineer
+          Software Engineer || QA Engineer || UI/UX Designer || User Support Specialist
         </motion.p>
 
         <motion.div
