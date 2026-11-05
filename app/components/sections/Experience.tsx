@@ -59,9 +59,12 @@ const experiences: Experience[] = [
     description:
       "Supporting the development and maintenance of AMREF's ESRC platform as part of the in-house software team.",
     bullets: [
-      "Exploring and understanding the existing system architecture and codebases.",
-      "Contributing to software development, debugging, and testing.",
-      "Participating in User Acceptance Testing (UAT) and technical documentation.",
+      "Explore the existing system architecture and codebases to understand how the platform's modules fit together.",
+      "Contribute to feature development and bug fixes across the platform.",
+      "Debug and test changes before they are released.",
+      "Participate in User Acceptance Testing (UAT) with stakeholders ahead of releases.",
+      "Write and maintain technical documentation for the work I deliver.",
+      "Work in Agile cycles alongside the in-house development team.",
     ],
     tools: [
       "C#",
@@ -79,6 +82,15 @@ const experiences: Experience[] = [
       "Visual Studio",
       "VS Code",
     ],
+    skills: [
+      "Software development",
+      "Debugging",
+      "Software testing",
+      "User Acceptance Testing (UAT)",
+      "Codebase and architecture analysis",
+      "Technical documentation",
+      "Agile workflows",
+    ],
   },
   {
     role: "Graphic & UI/UX Designer (Internship)",
@@ -86,7 +98,28 @@ const experiences: Experience[] = [
     period: "Feb 2026 - Apr 2026",
     location: "Kenya · Hybrid",
     description:
-      "Managed visual identity and digital presence during the C&I Conference 2026. Designed branding materials including posters, sponsor graphics, and promotional content. Created motion content for social media and maintained the WordPress website with updated speaker profiles and event programs. Rebuilt the brand identity system using Figma and Adobe tools, and contributed to design direction through industry exposure in renewable energy finance workshops.",
+      "Managed the visual identity and digital presence of the association during the C&I Conference 2026.",
+    bullets: [
+      "Designed branding materials including posters, sponsor graphics, and promotional content.",
+      "Created motion content for the association's social media channels.",
+      "Maintained the WordPress website, keeping speaker profiles and event programs up to date.",
+      "Rebuilt the brand identity system using Figma and Adobe tools.",
+      "Contributed to design direction, informed by industry exposure in renewable energy finance workshops.",
+    ],
+    tools: [
+      "Figma",
+      "Adobe Creative Suite",
+      "WordPress",
+    ],
+    skills: [
+      "Brand identity design",
+      "Visual identity systems",
+      "Graphic design",
+      "Motion graphics",
+      "Social media content",
+      "Event branding",
+      "Web content management",
+    ],
   },
 ];
 
