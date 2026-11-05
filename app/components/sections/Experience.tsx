@@ -128,7 +128,7 @@ const experiences: Experience[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 py-12 md:py-16">
+    <section id="experience" className="scroll-mt-24 px-6 py-10 md:scroll-mt-28 md:py-12">
       <div className="mx-auto max-w-5xl">
 
         <Reveal>
@@ -137,7 +137,7 @@ export default function Experience() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 space-y-10">
+        <div className="mt-10 space-y-10">
           {experiences.map((exp, i) => (
             <Reveal key={i}>
               <div className="relative border-l border-white/10 pl-6">
@@ -165,7 +165,7 @@ export default function Experience() {
                   {exp.company}
                 </p>
 
-                <p className="mt-1 text-xs text-zinc-500">
+                <p className="mt-1 text-xs text-zinc-400">
                   {exp.period} · {exp.location}
                 </p>
 
@@ -203,7 +203,7 @@ export default function Experience() {
                 )}
 
                 {exp.skills && (
-                  <p className="mt-4 text-xs leading-relaxed text-zinc-500">
+                  <p className="mt-4 text-xs leading-relaxed text-zinc-400">
                     <span className="text-zinc-400">Skills: </span>
                     {exp.skills.join(" · ")}
                   </p>

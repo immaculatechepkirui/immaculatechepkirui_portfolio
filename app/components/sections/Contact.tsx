@@ -4,8 +4,8 @@ import Reveal from "@/app/components/animations/Reveal";
 
 export default function Contact() {
     return (
-        <section id="contact" className="px-6 py-12 md:py-16">
-            <div className="mx-auto max-w-4xl text-center">
+        <section id="contact" className="scroll-mt-24 px-6 py-10 md:scroll-mt-28 md:py-12">
+            <div className="mx-auto max-w-5xl text-center">
 
                 <Reveal>
                     <h2 className="text-4xl font-bold md:text-6xl">
@@ -32,18 +32,21 @@ export default function Contact() {
                         <a
                             href="https://github.com/immaculatechepkirui"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="text-sm text-zinc-400 hover:text-white"
                         >
                             GitHub
                         </a> <a
                             href="https://www.linkedin.com/in/immaculate-chepkirui-b775b1355"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="text-sm text-zinc-400 hover:text-white"
                         >
                             LinkedIn
                         </a> <a
                             href="https://www.behance.net/immah_leley_kaku"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="text-sm text-zinc-400 hover:text-white"
                         >
                             Behance

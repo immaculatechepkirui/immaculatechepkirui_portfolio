@@ -4,7 +4,7 @@ import Reveal from "@/app/components/animations/Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="px-6 py-12 md:py-16">
+    <section id="about" className="scroll-mt-24 px-6 py-10 md:scroll-mt-28 md:py-12">
       <div className="mx-auto max-w-5xl">
 
         <Reveal>
@@ -33,7 +33,7 @@ export default function About() {
         </Reveal>
 
         <Reveal>
-          <p className="mt-6 text-lg leading-relaxed text-zinc-500">
+          <p className="mt-6 text-lg leading-relaxed text-zinc-400">
             Outside work, I enjoy bowling, watching F1 races, and exploring
             hidden gems.
           </p>

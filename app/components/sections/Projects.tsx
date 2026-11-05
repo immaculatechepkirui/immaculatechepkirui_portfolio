@@ -14,8 +14,8 @@ export default function Projects() {
       : projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="px-6 py-12 md:py-16">
-      <div className="mx-auto max-w-6xl">
+    <section id="projects" className="scroll-mt-24 px-6 py-10 md:scroll-mt-28 md:py-12">
+      <div className="mx-auto max-w-5xl">
         {/* Heading */}
         <h2 className="text-4xl font-bold md:text-6xl">
           Selected Projects
@@ -43,7 +43,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {filtered.map((project) => (
             <div
               key={project.title}

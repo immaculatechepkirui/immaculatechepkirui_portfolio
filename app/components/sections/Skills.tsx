@@ -38,7 +38,7 @@ const skillGroups: SkillGroup[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 py-12 md:py-16">
+    <section id="skills" className="scroll-mt-24 px-6 py-10 md:scroll-mt-28 md:py-12">
       <div className="mx-auto max-w-5xl">
 
         <Reveal>
@@ -47,7 +47,7 @@ export default function Skills() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 space-y-12">
+        <div className="mt-10 space-y-10">
           {skillGroups.map((group) => (
             <Reveal key={group.title}>
               <div>
