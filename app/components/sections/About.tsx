@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section id="about" className="px-6 py-12 md:py-16">
       <div className="mx-auto max-w-5xl">
-        
+
         <Reveal>
           <h2 className="text-4xl font-bold md:text-6xl">
             About Me
@@ -15,25 +15,27 @@ export default function About() {
 
         <Reveal>
           <p className="mt-8 text-lg leading-relaxed text-zinc-300">
-            I am a Software Engineer focused on building systems that sit at
-            the intersection of technology, design, and real-world impact.
+            I am a software developer and QA engineer who enjoys building
+            things that work well for real people. I build web applications
+            with React, .NET, Django, and Node.js, and I test them carefully
+            so problems are found early. I also have a background in UI and UX
+            design, which helps me think about how a person will actually use
+            what I build.
           </p>
         </Reveal>
 
         <Reveal>
           <p className="mt-6 text-lg leading-relaxed text-zinc-400">
-            My work spans AI systems, mobile applications, and full-stack web
-            platforms. I care deeply about performance, user experience, and
-            solving problems that matter in sectors like agriculture,
-            logistics, and digital infrastructure.
+            I am moving into user support, where I help people get unstuck
+            with software, answer their questions in plain words, and write
+            clear guides so the same problems do not come up again.
           </p>
         </Reveal>
 
         <Reveal>
           <p className="mt-6 text-lg leading-relaxed text-zinc-500">
-            Beyond engineering, I think in terms of product systems — how users
-            interact with tools, how data flows through systems, and how design
-            influences decision-making.
+            Outside work, I enjoy bowling, watching F1 races, and exploring
+            hidden gems.
           </p>
         </Reveal>
 
