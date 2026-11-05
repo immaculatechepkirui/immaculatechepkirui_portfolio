@@ -2,22 +2,43 @@
 
 import Reveal from "@/app/components/animations/Reveal";
 
-const skills = [
-  "Frontend Web",
-  "Frontend Mobile",
-  "Backend Development",
-  "AI & ML",
-  "UI/UX Design",
-  "Product Management",
-  "Quality Assurance",
-  "Data Structures & Algorithms",
-  "Graphic Design",
-  "Devops",
+type SkillGroup = {
+  title: string;
+  skills: string[];
+};
+
+const skillGroups: SkillGroup[] = [
+  {
+    title: "Engineering & AI",
+    skills: [
+      "Frontend Web",
+      "Frontend Mobile",
+      "Backend Development",
+      "AI & ML",
+      "DevOps",
+      "Data Structures & Algorithms",
+    ],
+  },
+  {
+    title: "Design & Product",
+    skills: [
+      "UI/UX Design",
+      "Graphic Design",
+      "Product Management",
+    ],
+  },
+  {
+    title: "Quality & Support",
+    skills: [
+      "Quality Assurance",
+      "User Support",
+    ],
+  },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 py-20 md:py-24">
+    <section id="skills" className="px-6 py-12 md:py-16">
       <div className="mx-auto max-w-5xl">
 
         <Reveal>
@@ -26,11 +47,27 @@ export default function Skills() {
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
-          {skills.map((skill, i) => (
-            <Reveal key={i}>
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-zinc-300 backdrop-blur-xl transition hover:scale-105">
-                {skill}
+        <div className="mt-12 space-y-12">
+          {skillGroups.map((group) => (
+            <Reveal key={group.title}>
+              <div>
+                <div className="flex items-center gap-4">
+                  <h3 className="text-sm font-medium uppercase tracking-widest text-violet-400">
+                    {group.title}
+                  </h3>
+                  <div className="h-[1px] flex-1 bg-white/10" />
+                </div>
+
+                <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
+                  {group.skills.map((skill) => (
+                    <div
+                      key={skill}
+                      className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-zinc-300 backdrop-blur-xl transition hover:scale-105 hover:border-violet-500/40"
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
               </div>
             </Reveal>
           ))}
