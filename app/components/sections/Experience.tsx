@@ -2,36 +2,97 @@
 
 import Reveal from "@/app/components/animations/Reveal";
 
-const experiences = [
+type Experience = {
+  role: string;
+  company: string;
+  period: string;
+  location: string;
+  current?: boolean;
+  description?: string;
+  bullets?: string[];
+  tools?: string[];
+  skills?: string[];
+};
+
+const experiences: Experience[] = [
+  {
+    role: "User Support Specialist",
+    company: "Grantbook",
+    period: "Oct 2026 - Present",
+    location: "Remote · Kenya",
+    current: true,
+    description:
+      "I provide Tier 1 helpdesk support for a global philanthropic foundation's Fluxx grants management system, working with Grantbook's support team.",
+    bullets: [
+      "Triage and investigate tickets in ServiceNow: partner and staff access, new user accounts, report submission errors, workflow routing and configuration requests.",
+      "Troubleshoot sign-in and access issues across SSO (Microsoft Entra ID), user profiles and roles, organisation links and project connections.",
+      "Follow and apply standard operating procedures (SOPs), document clear resolution notes, and escalate to L2 with evidence.",
+      "Identify configuration gaps and permission issues by comparing records and themes and using user impersonation in a pre-production environment.",
+      "Run daily queue triage: recategorise misfiled tickets and identify duplicate incidents to speed up team response.",
+    ],
+    tools: [
+      "Fluxx",
+      "ServiceNow",
+      "Microsoft 365",
+      "Windows 365 Cloud PC",
+      "Slack",
+      "Harvest",
+      "Coda",
+      "Google Workspace",
+    ],
+    skills: [
+      "Ticket triage",
+      "Access & identity troubleshooting (SSO, roles, permissions)",
+      "Workflow & approval processes",
+      "SOP-based support",
+      "Root-cause investigation",
+      "Technical documentation",
+      "Stakeholder communication",
+    ],
+  },
+  {
+    role: "Software Developer Intern",
+    company: "AMREF Health Africa",
+    period: "Sep 2026 - Present",
+    location: "Remote",
+    current: true,
+    description:
+      "Supporting the development and maintenance of AMREF's ESRC platform as part of the in-house software team.",
+    bullets: [
+      "Exploring and understanding the existing system architecture and codebases.",
+      "Contributing to software development, debugging, and testing.",
+      "Participating in User Acceptance Testing (UAT) and technical documentation.",
+    ],
+    tools: [
+      "C#",
+      ".NET",
+      "REST APIs",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "HTML5",
+      "CSS3",
+      "Sass",
+      "SQL Server",
+      "Git",
+      "GitHub",
+      "Visual Studio",
+      "VS Code",
+    ],
+  },
   {
     role: "Graphic & UI/UX Designer (Internship)",
     company: "Electricity Sector Association of Kenya (ESAK)",
-    period: "Feb 2026 – Apr 2026",
+    period: "Feb 2026 - Apr 2026",
     location: "Kenya · Hybrid",
     description:
       "Managed visual identity and digital presence during the C&I Conference 2026. Designed branding materials including posters, sponsor graphics, and promotional content. Created motion content for social media and maintained the WordPress website with updated speaker profiles and event programs. Rebuilt the brand identity system using Figma and Adobe tools, and contributed to design direction through industry exposure in renewable energy finance workshops.",
-  },
-  {
-    role: "Freelance Web Developer",
-    company: "Gecity Surveys",
-    period: "May 2026 – Present",
-    location: "Remote",
-    description:
-      "Developed a fully responsive Next.js website, deployed and currently maintaining and updating the platform. Responsible for ongoing improvements, bug fixes, and feature updates in production.",
-  },
-  {
-    role: "Freelance Graphic Designer & Builder",
-    company: "Independent Clients",
-    period: "2026",
-    location: "Remote",
-    description:
-      "Designed banners and visual assets for a clean energy association. Worked iteratively using Figma and HTML/CSS prototyping to validate layout decisions. Debugged rendering issues including image loading and CORS-related bugs. After delivery, independently built a Next.js invoice generator tool with TypeScript to automate client billing workflows, including PDF and DOCX export logic.",
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 py-20 md:py-24">
+    <section id="experience" className="px-6 py-12 md:py-16">
       <div className="mx-auto max-w-5xl">
 
         <Reveal>
@@ -46,11 +107,23 @@ export default function Experience() {
               <div className="relative border-l border-white/10 pl-6">
 
                 {/* dot */}
-                <div className="absolute -left-1 top-2 h-2 w-2 rounded-full bg-violet-500" />
+                <div
+                  className={`absolute -left-1 top-2 h-2 w-2 rounded-full ${
+                    exp.current ? "bg-violet-500" : "bg-zinc-600"
+                  }`}
+                />
 
-                <h3 className="text-xl font-semibold">
-                  {exp.role}
-                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="text-xl font-semibold">
+                    {exp.role}
+                  </h3>
+
+                  {exp.current && (
+                    <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-widest text-violet-300">
+                      Current
+                    </span>
+                  )}
+                </div>
 
                 <p className="text-sm text-zinc-400">
                   {exp.company}
@@ -60,9 +133,45 @@ export default function Experience() {
                   {exp.period} · {exp.location}
                 </p>
 
-                <p className="mt-4 text-sm leading-relaxed text-zinc-300">
-                  {exp.description}
-                </p>
+                {exp.description && (
+                  <p className="mt-4 text-sm leading-relaxed text-zinc-300">
+                    {exp.description}
+                  </p>
+                )}
+
+                {exp.bullets && (
+                  <ul className="mt-4 space-y-2">
+                    {exp.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className="relative pl-4 text-sm leading-relaxed text-zinc-400"
+                      >
+                        <span className="absolute left-0 top-[9px] h-1 w-1 rounded-full bg-violet-500/60" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {exp.tools && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {exp.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-300 transition hover:border-violet-400 hover:bg-violet-500/20"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {exp.skills && (
+                  <p className="mt-4 text-xs leading-relaxed text-zinc-500">
+                    <span className="text-zinc-400">Skills: </span>
+                    {exp.skills.join(" · ")}
+                  </p>
+                )}
 
               </div>
             </Reveal>
