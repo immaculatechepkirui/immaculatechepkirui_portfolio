@@ -14,7 +14,7 @@ export default function Projects() {
       : projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="px-6 py-20 md:py-24">
+    <section id="projects" className="px-6 py-12 md:py-16">
       <div className="mx-auto max-w-6xl">
         {/* Heading */}
         <h2 className="text-4xl font-bold md:text-6xl">
@@ -22,7 +22,7 @@ export default function Projects() {
         </h2>
 
         <p className="mt-4 text-zinc-400">
-          Mobile, AI, Web, and Quality Assurance projects I've built and tested.
+          Mobile, AI, Web, and Quality Assurance projects I&apos;ve built and tested.
         </p>
 
         {/* Category Filters */}

@@ -4,7 +4,7 @@ import Reveal from "@/app/components/animations/Reveal";
 
 export default function Contact() {
     return (
-        <section id="contact" className="px-6 py-20 md:py-24">
+        <section id="contact" className="px-6 py-12 md:py-16">
             <div className="mx-auto max-w-4xl text-center">
 
                 <Reveal>
@@ -15,7 +15,7 @@ export default function Contact() {
 
                 <Reveal>
                     <p className="mt-6 text-zinc-400">
-                        Have a project, idea, or opportunity? Let's build something impactful.
+                        Have a project, idea, or opportunity? Let&apos;s build something impactful.
                     </p>
                 </Reveal>
 
