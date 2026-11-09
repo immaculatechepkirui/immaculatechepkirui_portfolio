@@ -1,4 +1,22 @@
-export const projects = [
+type ProjectLinks = {
+  website?: string;
+  frontend?: string;
+  backend?: string;
+  mobile?: string;
+  design?: string;
+  docs?: string;
+};
+
+export type Project = {
+  title: string;
+  category: string;
+  featured?: boolean;
+  description: string;
+  links?: ProjectLinks;
+  tech: string[];
+};
+
+export const projects: Project[] = [
   {
     title: "Jumia Kenya QA Portfolio",
     category: "QA",
@@ -27,7 +45,6 @@ export const projects = [
     description:
       "AI-powered farming assistant for crop monitoring, yield prediction, and intelligent seed recommendations.",
     links: {
-      backend: "https://github.com/immaculatechepkirui/planta-backend",
       frontend: "https://github.com/immaculatechepkirui/planta-frontend",
       website:
         "https://github.com/immaculatechepkirui/planta-informational-website",
@@ -85,9 +102,6 @@ export const projects = [
       "Marketplace platform connecting Kenyan artisans with buyers through secure payments, logistics tracking, and M-Pesa integration.",
     links: {
       website: "https://craftcrestapp.vercel.app/",
-      frontend: "https://github.com/akirachix/craftcrest-frontend",
-      backend: "https://github.com/akirachix/craftcrest-backend",
-      mobile: "https://github.com/akirachix/craftcrest-mobile",
       design:
         "https://www.figma.com/design/7ccb3RQK9UpQ4ykpAgCPf4/CRAFT-CREST",
       docs:
@@ -109,8 +123,6 @@ export const projects = [
       "Digital platform helping cooperative farmers access agricultural training through gamified rewards, web services, and mobile experiences.",
     links: {
       website: "https://coopconnect.netlify.app/",
-      backend: "https://github.com/akirachix/mind-maps-backend",
-      mobile: "https://github.com/akirachix/mind-maps-mobile",
     },
     tech: [
       "Flutter",
