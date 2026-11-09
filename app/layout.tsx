@@ -22,15 +22,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   verification: {
-    // Google issues a new token per verification attempt. All of the
-    // outstanding ones are listed so whichever Search Console checks is
-    // present. Once the property verifies, only the one it used is needed.
-    google: [
-      "ppGiOr8iUeptLM9o1aMjOvKyWKn1SfW3jn56FP7NoIc",
-      "QZvVPzxnZDh5Xgahz5p-v3R_lU7KZiGDdCpZlK9cqgE",
-      "MYqdLh_1e-ku9PU4scPZ6tLoy9dF1VJ2uENtESp1yKw",
-      "7wWygvUv1wDcpWzxYzOH3lotMwDOIcy6mrJydeHZ408",
-    ],
+    google: "k9i6irJTzfuRRQAbjbXzpEXhbkbuzTFIsJqgXIdHwik",
   },
   authors: [{ name: "Immaculate Chepkirui" }],
   creator: "Immaculate Chepkirui",
