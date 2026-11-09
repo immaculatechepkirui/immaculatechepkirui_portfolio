@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LenisProvider from "./components/animations/LenisProvider";
 import { siteUrl, siteName, socialLinks } from "./lib/site";
+import { currentRoles, descriptionRoles } from "./data/experience";
 
 const prompt = Prompt({
   subsets: ["latin"],
@@ -11,8 +12,13 @@ const prompt = Prompt({
 });
 
 const title = "Immaculate Chepkirui — Software Engineer";
-const description =
-  "Immaculate Chepkirui — Software Engineer, QA Engineer, UI/UX Designer and User Support Specialist based in Kenya. Projects, skills and experience.";
+// Built from the current roles in the Experience section so the two stay
+// in step: ending or renaming a role changes this text as well.
+const currentWork = descriptionRoles
+  .map(({ role, company }) => `a ${role} at ${company}`)
+  .join(" and ");
+
+const description = `Immaculate Chepkirui is ${currentWork}. QA engineer and UI/UX designer based in Kenya.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -76,6 +82,10 @@ const personSchema = {
     "@type": "PostalAddress",
     addressCountry: "KE",
   },
+  worksFor: currentRoles.map((role) => ({
+    "@type": "Organization",
+    name: role.company,
+  })),
   sameAs: socialLinks,
   knowsAbout: [
     "Software Engineering",
