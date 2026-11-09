@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   verification: {
+    // Google Search Console ownership proof. Removing this un-verifies the
+    // property and loses access to its data, so keep it even if the metadata
+    // here is reorganised later.
     google: "k9i6irJTzfuRRQAbjbXzpEXhbkbuzTFIsJqgXIdHwik",
   },
   authors: [{ name: "Immaculate Chepkirui" }],
