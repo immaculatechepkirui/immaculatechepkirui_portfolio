@@ -15,7 +15,8 @@ export default function About() {
 
         <Reveal>
           <p className="mt-8 text-lg leading-relaxed text-zinc-300">
-            I am a software developer and QA engineer who enjoys building
+            I am Immaculate Chepkirui, a software developer and QA engineer
+            who enjoys building
             things that work well for real people. I build web applications
             with React, .NET, Django, and Node.js, and I test them carefully
             so problems are found early. I also have a background in UI and UX
