@@ -12,7 +12,7 @@ const prompt = Prompt({
 
 const title = "Immaculate Chepkirui — Software Engineer";
 const description =
-  "Portfolio of Immaculate Chepkirui, a software developer and QA engineer based in Kenya. Projects, skills, experience and contact.";
+  "Immaculate Chepkirui — Software Engineer, QA Engineer, UI/UX Designer and User Support Specialist based in Kenya. Projects, skills and experience.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -62,7 +62,15 @@ const personSchema = {
   name: "Immaculate Chepkirui",
   url: siteUrl,
   image: `${siteUrl}/icon.png`,
-  jobTitle: "Software Engineer",
+  jobTitle: [
+    "Software Engineer",
+    "QA Engineer",
+    "UI/UX Designer",
+    "User Support Specialist",
+  ],
+  // Tells Google this is a distinct person from others sharing the name.
+  disambiguatingDescription:
+    "Kenyan software engineer and QA engineer working in web development, quality assurance and UI/UX design.",
   description,
   address: {
     "@type": "PostalAddress",
