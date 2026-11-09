@@ -14,7 +14,10 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-6xl font-bold md:text-8xl"
         >
-          Immaculate
+          {/* The space before the break keeps the extracted text
+              "Immaculate Chepkirui" rather than one run-together word,
+              which is what search engines read as the page's subject. */}
+          Immaculate{" "}
           <br />
           Chepkirui
         </motion.h1>
